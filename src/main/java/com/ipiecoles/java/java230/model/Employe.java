@@ -5,8 +5,13 @@ import org.joda.time.LocalDate;
 
 import java.util.Objects;
 
-public abstract class Employe {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "employe")
+public abstract class Employe {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	private String nom;
