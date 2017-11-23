@@ -80,7 +80,7 @@ public class EmployeRepositoryTest {
         TestUtils.checkImplementInterface("EmployeRepository", "PagingAndSortingRepository");
         try {
             TestUtils.getClasse("BaseEmployeRepository");
-            //TestUtils.checkMethod("BaseEmployeRepository", "findByNomIgnoreCase", TestUtils.PAGE, TestUtils.STRING, TestUtils.PAGEABLE);
+            TestUtils.checkMethod("BaseEmployeRepository", "findByNomIgnoreCase", TestUtils.PAGE, TestUtils.STRING, TestUtils.PAGEABLE);
         } catch (ClassNotFoundException e){
             TestUtils.checkMethod("EmployeRepository", "findByNomIgnoreCase", TestUtils.PAGE, TestUtils.STRING, TestUtils.PAGEABLE);
         }
